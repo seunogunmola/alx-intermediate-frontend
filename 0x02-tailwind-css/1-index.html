@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic CSS Grid Layout</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./src/output.css">
+    <style type="text/tailwindcss">
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body >
+
+<body>
     <header>
         <h1>Basic CSS Grid Layout</h1>
     </header>
 
-    <main>
-        <div>Column 1</div>
-        <div>Column 2</div>
-        <div>Column 3</div>
+    <main class="grid grid-cols-4 gap-4">
+        <div class="bg-blue-200 p-4">Column 1</div>
+        <div class="bg-blue-300 p-4">Column 2</div>
+        <div class="bg-blue-400 p-4">Column 3</div>
     </main>
-   </body>
+</body>
+
 </html>
